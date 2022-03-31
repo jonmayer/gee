@@ -20,9 +20,9 @@ shellcheck_test(
 
 genrule(
     name = "gee.md-gen",
-    outs = ["actual-gee.md"],
     srcs = ["gee"],
-    cmd_bash = "TERM=none /bin/bash $(location gee) help markdown >$@"
+    outs = ["actual-gee.md"],
+    cmd_bash = "TERM=none /bin/bash $(location gee) help markdown >$@",
 )
 
 diff_test(
